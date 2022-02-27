@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Redressed&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2fd2b74342.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
+    <link rel="stylesheet" href="/style.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <div class="landing__page">
+        <div class="navigation__container">
+            <div class="navigation">
+                <header>
+                    <div class="logo">
+                        <img src="/assets/sangeetic.png" alt="Sangeetic" />
+                    </div>
+                    <h1>Sangeetic</h1>
+                </header>
+                <nav class="navbar" aria-label="main" role="navigation">
+                    <ul>
+                        <li><a href="#" class="nav_links">Playlists</a></li>
+                        <li><a href="#" class="nav_links">Listen Songs</a></li>
+                        <li><a href="#" class="nav_links">About Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="text_container">
+            <img src="/assets/man-searching-music.png" alt="Man Searching Music" class="textctrimg01">
+            <img src="/assets/spotify.png" alt="Spotify" class="textctrimg02">
+            <img src="/assets/retro-microphone.png" alt="Retro Microphone" class="textctrimg03">
+            <div class="text_box">
+                <h2 class="text_prototype_1">
+                    Tired of Searching for new <span class="text_prototype_2">Playlists</span>
+                    <img src="/assets/dizzy-face.png" alt="Face With Head Bandage" class="text_cont_img tbimg1">
+                </h2>
+                <h2 class="text_prototype_1">
+                    We have got you covered.
+                </h2>
+                <h2 class="text_prototype_1">Introducing -
+                    <span class="text_prototype_3">Sangeetic</span>
+                </h2>
+                </h2>
+                <h4 class="text_prototype_1">
+                    Find the perfect playlist for any mood or genre.
+                </h4>
+            </div>
+            <div class="button__box">
+                <button class="btn">
+                    <span>
+                        <a href="#">Get Started</a>
+                    </span>
+                </button>
+                <button class="btn">
+                    <span>
+                        <a href="#">Play a Song</a>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="music__player__container" id="music__player__container">
+            <div class="music_container">
+                <audio src="/music/Tsunami.mp3" id="audio"></audio>
+
+                <div class="img_container">
+                    <img src="/images/Tsunami.jpg" alt="Music-Cover" id="cover" />
+                </div>
+
+                <div class="music_info">
+                    <h4 id="title">Цунами</h4>
+                    <p id="singer">Escape</p>
+                </div>
+
+                <div class="music_navigation">
+                    <div class="music_player_navigation">
+                        <div class="progress_container">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="duration_info">
+                            <span id="current_time"></span>
+                            <span id="duration"></span>
+                        </div>
+                    </div>
+                    <div class="navigation___buttons">
+                        <button id="prev" class="action_btn">
+                            <i class="fa-solid fa-backward"></i>
+                        </button>
+
+                        <button id="play" class="action_btn action_btn_big">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </button>
+
+                        <button id="next" class="action_btn">
+                            <i class="fa-solid fa-forward"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="playlist__container">
+        <h2>Playlist Section</h2>
+        <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Search genre or name" id="playlistSearch">
+        </div>
+        <div class="playlist__box">
+            
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
