@@ -87,13 +87,13 @@ function nextSong() {
 
 function updateProgressBar(e) {
     // console.log(e.srcElement.currentTime + " | " + e.srcElement.duration);
-    // console.log(e);
+    console.log(e.srcElement.duration);
     // const str = 0;
     const { duration, currentTime } = e.srcElement;
     // console.log(`${audio.currentTime}  `);
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
-    // console.log(duration + " " + currentTime)
+    console.log()
     document.getElementById('current_time').innerText = `${Math.floor(currentTime / 60)} : ${pad(Math.floor(currentTime % 60))}`
     document.getElementById('duration').innerText = `${Math.floor(duration / 60)} : ${pad(Math.floor(duration % 60))}`
 }
@@ -132,7 +132,12 @@ audio.addEventListener('ended', nextSong);
 
 
 // Searching Functionalities
-const iframes = document.querySelectorAll('iframe');
-const observer = lozad(iframes); // lazy loads elements with default selector as ".lozad"
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();
+
+const playASong = document.getElementById('playASong');
+playASong.onclick = () => {
+    loadSong(songs[songIndex]);
+    playSong();
+}
 
